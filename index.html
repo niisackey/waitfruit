@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="trial.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap" rel="stylesheet">
+	<title>Coming Soon</title>
+</head>
+<body>
+	<section class="textarea">
+		
+		<h1>Under Construction.</h1>
+		<p>We are Currently working on a system to make placing orders with us simple and Easy. <br> Stay Tuned !</p>
+		<div class="loader">
+			<div class="loader-inner"> 
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			  <div class="loader-block"></div>
+			</div>
+		  </div>
+		  
+
+		<div id="countdown">
+			<div class="contain">
+				<span class="count-item" id="day-count"></span>
+			</div>
+			
+			<div class="contain">
+				<span class="count-item" id="hour-count"></span>
+			</div>
+			<div class="contain">
+				<span class="count-item" id="minute-count"></span>
+			</div>
+			<div class="contain">
+				<span class="count-item" id="second-count"></span>
+			</div>
+			
+		</div>
+	</section><br><br>
+
+	<div class="icons">
+		<a href="https://www.instagram.com/fruityrefresh_yawa/">
+			<div class="contains">
+				<i id="icon" class="fab fa-instagram fa-2x" style="color: rgb(0, 0, 0);"></i>
+			</div>
+		</a>
+
+		<a href="">
+			<div class="contains">
+				<i id="icon" class="fab fa-facebook fa-2x" style="color: rgb(0, 0, 0);"></i>
+			</div>
+		</a>
+		<a href="https://wa.me/233572059288">
+			<div class="contains">
+				<i id="icon" class="fab fa-whatsapp fa-2x" style="color: rgb(0, 0, 0);"></i>
+			</div>
+		</a>
+		
+		
+		
+		
+	</div>
+	
+
+	
+
+	
+    <script>
+        // Set the date we're counting down to (13 days from today)
+        const countDownDate = new Date();
+        countDownDate.setDate(countDownDate.getDate() + 12);
+
+        // Update the countdown every 1 second
+        const x = setInterval(function() {
+            // Get the current date and time
+            const now = new Date().getTime();
+
+            // Calculate the remaining time
+            const distance = countDownDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the countdown
+			document.getElementById("day-count").innerHTML = `${days}d`;
+            document.getElementById("hour-count").innerHTML = `${hours}h`;
+            document.getElementById("minute-count").innerHTML = `${minutes}m`;
+            document.getElementById("second-count").innerHTML = `${seconds}s`;
+
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+
+
+
+
+</body>
+</html>
